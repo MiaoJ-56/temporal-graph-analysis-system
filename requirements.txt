@@ -3,3 +3,5 @@ numpy
 pandas
 pydeck
 streamlit
+scikit-learn
+torch

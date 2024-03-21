@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 import numpy as np
 
-from utils.DataLoader import Data
+from algorithm.utils.DataLoader import Data
 
 
 def set_random_seed(seed: int = 0):
@@ -139,6 +139,8 @@ class NeighborSampler:
         """
         # return index i, which satisfies list[i - 1] < v <= list[i]
         # return 0 for the first position in self.nodes_neighbor_times since the value at the first position is empty
+        # print(len(self.nodes_neighbor_times))
+        # print(type(node_id))
         i = np.searchsorted(self.nodes_neighbor_times[node_id], interact_time)
 
         if return_sampled_probabilities:

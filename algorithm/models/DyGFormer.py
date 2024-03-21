@@ -4,8 +4,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.nn import MultiheadAttention
 
-from models.modules import TimeEncoder
-from utils.utils import NeighborSampler
+from algorithm.models.modules import TimeEncoder
+from algorithm.utils.utils import NeighborSampler
 
 
 class DyGFormer(nn.Module):
