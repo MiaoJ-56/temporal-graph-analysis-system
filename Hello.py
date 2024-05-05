@@ -76,7 +76,7 @@ def run():
     st.write('您设置的偏移时间是:', number,'最终预测时间为：',predict_ts+number)
     # 开始预测
     st.write("显示一个正样例:", dataframe[40000:40001])
-    dataframe[dataframe.ts==3636687]
+    # dataframe[dataframe.ts==3636687]
     src_node_embeddings, dst_node_embeddings, probabilities = get_probabilities(src_node=src_node, dst_node=dst_node, timestampe=predict_ts+number)
 
     st.write("预测结果", format(probabilities.item(),'.3%'))
