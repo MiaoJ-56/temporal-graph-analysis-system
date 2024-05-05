@@ -29,11 +29,11 @@ def run():
     )
     st.write("# 欢迎来的时序图分析系统! 👋")
     
-    uploaded_file = st.file_uploader("上传数据集")
-    if uploaded_file is not None:
-        # Can be used wherever a "file-like" object is accepted:
-        dataframe = pd.read_csv(uploaded_file)
-        dataframe[0:10]
+    # uploaded_file = st.file_uploader("上传数据集")
+    # if uploaded_file is not None:
+    #     # Can be used wherever a "file-like" object is accepted:
+    #     dataframe = pd.read_csv(uploaded_file)
+    #     dataframe[0:10]
 
     dataframe =pd.read_csv("./uci/ml_uci.csv", index_col=0)
     if dataframe is None:
